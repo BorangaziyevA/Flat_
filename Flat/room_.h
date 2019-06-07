@@ -1,20 +1,22 @@
 #pragma once
-#include<iostream>
 using namespace std;
-class room_
+class room
 {
+private:
 	char* name;
 	int area;
 
 public:
-	room_();
-	room_(const char* name,int area);
-	~room_();
-	void info();
-	char* getName();
+	room();
+	room(const char* name, int area);
+	room(const room & obj);
+	//setters
+	void setName();
+	void setArea();
+	void rewrite(const room&p);
+	//getters
+	void info()const;
 	int getArea();
-	void setName(const char* name);
-	void setArea(int area);
-	
-};
-
+	bool getName();
+	~room();
+}; 
